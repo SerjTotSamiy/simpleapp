@@ -1,0 +1,47 @@
+.main {
+  width: 59vw;
+  margin: 0 auto;
+
+  &_text {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  &-posts {
+    position: relative;
+
+
+    &:before {
+      position: absolute;
+      left: -110px;
+      content: url("quotes.svg");
+    }
+
+    &:after {
+      content: url("/components/yellow.svg");
+      position: absolute;
+      bottom: 0;
+      left: -33%;
+    }
+
+    &_post {
+      text-align: left;
+
+      & p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen  and (min-width: 0px) and (max-width: 425px){
+  .main_text {
+    font-size: 20px;
+  }
+  .main-posts {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
