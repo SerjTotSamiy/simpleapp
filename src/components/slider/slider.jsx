@@ -39,9 +39,6 @@ function Slider() {
                 const names = result.map(elem => elem.name)
                 const company = result.map(elem => elem.company.name)
                 const u = result.map(elem => {
-                    /*Попробуй что нибудь придумать
-                    * с тернарником для смены класса у
-                    * блока)*/
                     return <figure key={elem.id} onClick={() => show(elem.id + num)}
                                    tabIndex={elem.id}
                     >
